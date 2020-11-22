@@ -38,7 +38,7 @@ create table dmshem_team.offers as (
                      dj ->> 'user_id'               as user_id,
                      (dj ->> 'created')::timestamp  as created_dttm,
                      (dj ->> 'due')::timestamp      as due,
-                     (dj ->> 'time')::decimal       as estimated_waiting
+                     (dj ->> 'time')::decimal       as time
              from offers
          )
     select *
